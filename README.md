@@ -78,22 +78,22 @@ python3 dir2mob.py /path/to/apk_directory
 ### Example
 
 ```bash
-$ python3 dir2mob.py ./apk_samples
-[+] Found 3 APKs to upload.
-[+] Uploading apk_samples/app1.apk...
-[+] APK uploaded, hash=82ab8b21…
+$ python3 dir2mob.py ../apk/
+[+] Found 1 APKs to upload.
+[+] Uploading ../apk/base.apk to MobSF...
+[+] Starting scan for hash 04184fd43d293434b21775b3ff38b4a8...
 [+] Scan triggered successfully.
-[+] Downloading reports for app1…
-[+] PDF report saved:  apk_samples/reports/app1_report.pdf
+[+] Scan completed for ../apk/base.apk.
+[+] JSON report saved: ../apk/reports/base_report.json
+[+] PDF report saved: ../apk/reports/base_report.pdf
 …
 
-$ tree
-.
-├── apk
-│   ├── base.apk
-│   └── reports
-│       └── base_report.pdf
-└── dir2mob.py
+$ tree ../apk/
+../apk/
+├── base.apk
+└── reports
+    ├── base_report.json
+    └── base_report.pdf
 ```
 
 All reports will be under `./apk_samples/reports/`, named `<apk_basename>_report.pdf`.
